@@ -1,3 +1,8 @@
+/*
+ * FROM FORKED REPO: git@github.com:pivotal-wave/jquery-carousel-lite.git
+ * Use this version and not the minified version - minified version does not have our fixes.
+ */
+
 /*!
  * jCarousel Lite - v1.8.7 - 2013-10-28
  * http://kswedberg.github.com/jquery-carousel-lite/
@@ -301,6 +306,8 @@ $.fn.jCarouselLite = function(options) {
       }
 
       li.removeClass(o.activeClass);
+
+      styles.liSize = $(".carousel li:eq(0)").width();
 
       // If circular and we are in first or last, then go to the other end
       if (o.circular) {
